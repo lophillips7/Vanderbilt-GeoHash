@@ -15,19 +15,6 @@ import java.io.*;
 public class GeoHash {
 
 	/**
-	 * This live session will focus on basic Java and some concepts important to
-	 * functional programming, such as recursion.
-	 *
-	 * This class uses a main() method where we can write our own simple "experiments" to
-	 * test how our code works. You are encouraged to modify the main method to play around
-	 * with your code and understand it. When you have working code, you can extract it
-	 * into a method. When you have working examples with assertions, you can extract them
-	 * into tests.
-	 *
-	 * I have left some sample experiments in main() to help you understand the geohash
-	 * algorithm.
-	 *
-	 *
 	 * This class will provide an implementation of GeoHashes:
 	 *
 	 * https://www.mapzen.com/blog/geohashes-and-you/
@@ -67,6 +54,7 @@ public class GeoHash {
 		} // method		
 
 	public static boolean[] geohash2DLoop(double v1, double[] v1range, double v2, double[] v2range, int bitsOfPrecision) {
+		
 		boolean[] hashArray1 = new boolean[bitsOfPrecision/2 + 1]; // initialize a boolean array to add values to and update
 		boolean[] hashArray2 = new boolean[bitsOfPrecision/2]; // initialize a boolean array2 to add values to and update	
 		double targetPoint1 = v1;
@@ -236,7 +224,7 @@ public class GeoHash {
 		assertEquals("00001", geohashString(-158.5, LONGITUDE_RANGE, 5));
 		assertEquals("00000", geohashString(-169.75, LONGITUDE_RANGE, 5));
 		
-		
+		// 2d testing
         assertEquals("0000000000", toHashString(geohash(LATITUDE_RANGE[0], LONGITUDE_RANGE[0], 10)));
         assertEquals("0101010101", toHashString(geohash(LATITUDE_RANGE[0], LONGITUDE_RANGE[1], 10)));
         assertEquals("01010101010", toHashString(geohash(LATITUDE_RANGE[0], LONGITUDE_RANGE[1], 11)));
