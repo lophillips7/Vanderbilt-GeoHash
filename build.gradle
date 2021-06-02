@@ -1,0 +1,19 @@
+plugins {
+	id 'java'
+}
+
+group = 'edu.vanderbilt.cs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+}
+
+test {
+	useJUnitPlatform()
+}
